@@ -1,45 +1,59 @@
-from pokemonInicial import SeleccionarPokeInicial
 from datos_de_combate import Dato_combate
-datoP = Dato_combate()
-pokemon = SeleccionarPokeInicial()
-print ("Equipo Pokemon")
+import os
 
-print("1- Combate")
-print("pokemon seleccionado")
-print("2- Objetos")
-print("3- Pokemon")
-print("4- Escapar")
-opcion = int(input("¿Qué deberia hacer {pokemon}? "))
-if opcion == 1:
-    print(f"Puntos de salud{datoP.puntos_de_salud}")
-    print(f"Ataque 1")
-    print("ataque 2")
-    print("ataque 4")
-    print("ataque 3")
-elif opcion == 2:
-    print("Mochila")
-    print("1-Objetos curativos")
-    print("2-Objetos de combate")
-    print("3-Pokebolas")
-elif opcion == 3:
-    print("pokemon 1")
-    print("Pokemon 2")
-    pok = int(input("Que pokemon desea sacar: "))
-    if pok == 1:
-        print("1-sacar")
-        print("2-stats")
-        opcion = int(input("Eliga una opcion"))
-        if opcion == 1:
-            print("saca el pokemon")
-        elif opcion == 2:
-            print(f"Puntos de salud: {datoP.puntos_de_salud()}")
-            print(f"Ataque: {datoP.ataque()}")
-            print(f"Ataque especial: {datoP.ataque_especial()}")
-            print(f"Defensa: {datoP.defensa()}")
-            print(f"Defensa especial: {datoP.defensa_especial()}")
-            print(f"Velocidad: {datoP.velocidad()}")
-    elif pok == 2:
+clear = lambda: os.system('cls')
+pause = lambda: os.system('pause')
+
+entrenador = (input('¿Cuál es tu nombre?: '))
+print(f"Bienvenido entrenador(a) {entrenador}")
+print('--------------------------------------')
+print('Seleccion de pokemon')
+print('1. Bulbasaur')
+print('2. Charmander')
+print('3. Squirtle')
+pokemon_inicial = int(input('Por favor, selecciona un pokemon: '))
+if pokemon_inicial == 1: 
+    print(f"Genial entrenador(a) {entrenador}, has seleccionado a Bulbasaur para acompañarte en tu aventura!!!")
+    apodo = input('¿Cómo deseas llamar a tu pokemon?: ')
+    pause()
+    clear()
+elif pokemon_inicial == 2:
+    print(f"Genial entrenador(a) {entrenador}, has seleccionado a Charmander para acompañarte en tu aventura!!!")
+    apodo = input('¿Cómo deseas llamar a tu pokemon?: ')
+    print(f"{apodo} ahora es parte de tu equipo pokémon!!!")
+    pause()
+    clear()
+elif pokemon_inicial == 3:
+    print(f"Genial entrenador(a) {entrenador}, has seleccionado a Squirtle para acompañarte en tu aventura!!!")
+    apodo = input('¿Cómo deseas llamar a tu pokemon?: ')
+    print(f"{apodo} ahora es parte de tu equipo pokémon!!!")
+    pause()
+    clear()
+else:
+    print(f"Entrenador(a) {entrenador} debes seleccionar una opcion valida!")
+    apodo = input('¿Cómo deseas llamar a tu pokemon?: ')
+    print(f"{apodo} ahora es parte de tu equipo pokémon!!!")
+    pause()
+    clear()
+
+print('Menú principal')
+print('1. Equipo Pokemón')
+print('2. Batallas contra Pokémon salvajes')
+print('3. Pokédex')
+print('4. Tienda')
+print('5. Salir del videojuego')
+opcion = int(input('Selecciona un a opción: '))
+
+while True:
+    if opcion == 1:
         pass
-elif opcion == 4:
-    print("Ha escado del combate")    
-
+    elif opcion == 2:
+        pass
+    elif opcion == 3:
+        pass
+    elif opcion == 4:
+        pass
+    elif opcion == 5:
+        break
+    else:
+        continue
